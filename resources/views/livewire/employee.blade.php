@@ -8,8 +8,8 @@
 
     {{-- Employee Form --}}
     <div class="bg-white rounded-lg shadow-md overflow-hidden mb-8 border border-gray-100">
-        <div class="bg-indigo-600 text-white px-6 py-4 flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-red-600 text-white px-6 py-4 flex items-center gap-2">
+            <svg class="w-5 h-5" #df0d0d stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
             </svg>
             <h3 class="font-semibold text-lg">{{ $isEditing ? 'Edit Employee' : 'Add Employee' }}</h3>
@@ -26,7 +26,7 @@
                             wire:model="employeeNumber"
                             maxlength="3"
                             placeholder="001"
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('employeeNumber') border-red-500 @enderror">
+                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 text-sm @error('employeeNumber') border-red-500 @enderror">
                         @error('employeeNumber')
                         <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
                         @enderror
@@ -36,7 +36,7 @@
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Position</label>
                         <input type="text" wire:model="position"
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('position') border-red-500 @enderror">
+                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 text-sm @error('position') border-red-500 @enderror">
                         @error('position')
                         <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
                         @enderror
@@ -46,7 +46,7 @@
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
                         <input type="text" wire:model="firstName"
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('firstName') border-red-500 @enderror">
+                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 text-sm @error('firstName') border-red-500 @enderror">
                         @error('firstName')
                         <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
                         @enderror
@@ -56,7 +56,7 @@
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
                         <input type="text" wire:model="lastName"
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('lastName') border-red-500 @enderror">
+                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 text-sm @error('lastName') border-red-500 @enderror">
                         @error('lastName')
                         <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
                         @enderror
@@ -66,7 +66,7 @@
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                         <input type="email" wire:model="email"
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('email') border-red-500 @enderror">
+                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 text-sm @error('email') border-red-500 @enderror">
                         @error('email')
                         <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
                         @enderror
@@ -76,7 +76,7 @@
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
                         <input type="text" wire:model="phone"
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('phone') border-red-500 @enderror">
+                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 text-sm @error('phone') border-red-500 @enderror">
                         @error('phone')
                         <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
                         @enderror
@@ -86,7 +86,7 @@
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Date Hired</label>
                         <input type="date" wire:model="hiredAt"
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm @error('hiredAt') border-red-500 @enderror">
+                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-red-500 focus:ring-red-500 text-sm @error('hiredAt') border-red-500 @enderror">
                         @error('hiredAt')
                         <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
                         @enderror
@@ -104,10 +104,10 @@
                     @endif
 
                     <button type="submit" wire:loading.attr="disabled"
-                        class="inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-indigo-700 focus:bg-indigo-700 active:bg-indigo-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                        class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 focus:bg-red-700 active:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">
                         <span wire:loading.remove>{{ $isEditing ? 'Update Employee' : 'Save Employee' }}</span>
                         <span wire:loading class="flex items-center gap-2">
-                            <svg class="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24" fill="none">
+                            <svg class="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24" #df0d0d>
                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                             </svg>
@@ -126,7 +126,7 @@
                 <h3 class="font-bold text-gray-800 text-lg">Employee List</h3>
                 <p class="text-xs text-gray-500">All registered employees</p>
             </div>
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
                 {{ $employees->total() }} Employees
             </span>
         </div>
@@ -167,7 +167,7 @@
                                 <!-- Edit Button -->
                                 <button wire:click="edit({{ $employee->id }})"
                                     class="inline-flex items-center px-2.5 py-1.5 bg-amber-50 text-amber-700 hover:bg-amber-100 border border-amber-200 rounded text-xs font-medium transition duration-150">
-                                    <svg class="w-3.5 h-3.5 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-3.5 h-3.5 me-1" #df0d0d stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                     </svg>
                                     Edit
@@ -176,7 +176,7 @@
                                 <!-- Delete Button -->
                                 <button wire:click="delete({{ $employee->id }})" wire:confirm="Are you sure you want to delete this employee record?"
                                     class="inline-flex items-center px-2.5 py-1.5 bg-red-50 text-red-700 hover:bg-red-100 border border-red-200 rounded text-xs font-medium transition duration-150">
-                                    <svg class="w-3.5 h-3.5 me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-3.5 h-3.5 me-1" #df0d0d stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                                     </svg>
                                     Delete
@@ -206,7 +206,7 @@
     <div class="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center bg-black bg-opacity-50">
         <div class="bg-white rounded-lg shadow-xl p-6 max-w-sm w-full text-center">
             <div class="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-6 h-6" #df0d0d stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
             </div>

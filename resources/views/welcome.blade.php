@@ -27,7 +27,7 @@
         </h1>
 
         <p class="mt-4 text-lg md:text-xl font-semibold text-gray-600">
-            Temporal Laravel Project
+            Laravel Project
         </p>
 
         <!-- Button moved directly under the text with a top margin -->
